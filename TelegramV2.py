@@ -125,7 +125,7 @@ url = f"https://api.telegram.org/bot{TOKEN}/sendMessage"
 
 payload = {
     "chat_id": CHAT_ID,
-    "text": MESSAGE
+    "text": "\n".join(MESSAGE)
 }
 
 resp = requests.post(url, data=payload)
