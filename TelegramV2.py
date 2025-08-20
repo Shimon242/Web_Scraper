@@ -118,7 +118,7 @@ if __name__ == "__main__":
             print(line)
             MESSAGE.append(line)
           
-TOKEN = ":AAHxFno48Um2htiDmWvFjijJWWYdx10DfE0"
+TOKEN = ""
 CHAT_ID = "-1002573467611"  # your group chat ID
 
 url = f"https://api.telegram.org/bot{TOKEN}/sendMessage"
