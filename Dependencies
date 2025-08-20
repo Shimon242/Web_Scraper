@@ -1,0 +1,5 @@
+sudo apt update
+sudo apt install -y curl
+curl -sS https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+python3 -m pip install cloudscraper
+python3 -m pip install googletrans
