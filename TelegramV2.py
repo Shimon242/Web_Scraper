@@ -106,11 +106,30 @@ def search_nodeseek(keyword, max_pages=30):
 if __name__ == "__main__":
     keyword = input("Enter search keyword: ").strip()
     matches = search_nodeseek(keyword, max_pages=30)
+    MESSAGE = []
 
     if not matches:
         print("\nNo matching posts found in 30 pages.")
     else:
         print(f"\n✅ Found {len(matches)} matching posts:")
         for item in matches:
-            print(f"- {item['title']}: {item['url']}")
+            line = f"- {item['title']}: {item['url']}"
+            print(line)
+            MESSAGE.append(line)
           
+TOKEN = ":AAHxFno48Um2htiDmWvFjijJWWYdx10DfE0"
+CHAT_ID = "-1002573467611"  # your group chat ID
+
+url = f"https://api.telegram.org/bot{TOKEN}/sendMessage"
+
+payload = {
+    "chat_id": CHAT_ID,
+    "text": MESSAGE
+}
+
+resp = requests.post(url, data=payload)
+
+if resp.status_code == 200:
+    print("✅ Message sent successfully!")
+else:
+    print("❌ Failed to send message:", resp.text)
