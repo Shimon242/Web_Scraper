@@ -1,6 +1,7 @@
 from html.parser import HTMLParser
 import urllib.parse
 import time
+import requests
 
 # Use cloudscraper if available, otherwise fallback to requests
 try:
