@@ -1,6 +1,6 @@
 import requests
 
-TOKEN = "7817487510:AAHxFno48Um2htiDmWvFjijJWWYdx10DfE0"
+TOKEN = ":AAHxFno48Um2htiDmWvFjijJWWYdx10DfE0"
 CHAT_ID = "-1002573467611"  # your group chat ID
 MESSAGE = "Hello, this is an automated message from my Python script!"
 
