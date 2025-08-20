@@ -71,6 +71,10 @@ def search_nodeseek(keyword, max_pages=100):
         parser = NodeSeekParser()
         parser.feed(resp.text)
 
+        # DEBUG: Print out collected titles/links
+        for orig_title, link in zip(parser.titles, parser.links):
+            print(f"[DEBUG] Title: {orig_title} | Link: {link}")
+
         for orig_title, link in zip(parser.titles, parser.links):
             matched = False
             if keyword.lower() in orig_title.lower():
