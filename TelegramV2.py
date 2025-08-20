@@ -53,7 +53,7 @@ class PostTitleParser(HTMLParser):
             self.current_text += data
 
 
-def search_nodeseek(keyword, max_pages=30):
+def search_nodeseek(keyword, max_pages=100):
     results = []
 
     headers = {
@@ -106,7 +106,7 @@ def search_nodeseek(keyword, max_pages=30):
 
 if __name__ == "__main__":
     keyword = input("Enter search keyword: ").strip()
-    matches = search_nodeseek(keyword, max_pages=30)
+    matches = search_nodeseek(keyword, max_pages=100)
     MESSAGE = []
 
     if not matches:
@@ -125,7 +125,7 @@ url = f"https://api.telegram.org/bot{TOKEN}/sendMessage"
 
 payload = {
     "chat_id": CHAT_ID,
-    "text": MESSAGE
+    "text": "Here is your daily blog checks" + MESSAGE
 }
 
 resp = requests.post(url, data=payload)
