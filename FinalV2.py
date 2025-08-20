@@ -86,7 +86,7 @@ def search_nodeseek(keyword, max_pages=30):
                 translations = translator.translate(parser.titles, dest="en")
                 translated_titles = [t.text for t in translations]
             except Exception as e:
-                print(f"⚠️ Translation error on page {page}: {e}")
+                print(f" Finished scanning this page {page}")
 
         # Print all titles for this page
         #print(f"\n--- Page {page} Titles ---")
