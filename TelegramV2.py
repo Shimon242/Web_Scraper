@@ -125,7 +125,7 @@ url = f"https://api.telegram.org/bot{TOKEN}/sendMessage"
 
 payload = {
     "chat_id": CHAT_ID,
-    "text": "Here is your daily blog checks" + MESSAGE
+    "text": MESSAGE
 }
 
 resp = requests.post(url, data=payload)
